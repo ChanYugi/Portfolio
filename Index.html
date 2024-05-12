@@ -11,15 +11,16 @@
     <script src="scripts/code.jquery.com-3.7.1.min.js"></script>
     <script src="scripts/jquery-3.7.1.js" async>  </script>
 
-    <!-- include animations js file -->
-    <script src="animations.js"></script>
+    <!-- include functionality js file -->
+    <script src="Functionality.js" async></script>
+
     <link rel="stylesheet" href="Styles/Styles.css">
 
-    
 </head>
 
 
 <body>
+    <!-- Initial page and buttons -->
     <div class="firstPage">
         <div class="title">
             Yugi Chan<br>
@@ -27,30 +28,55 @@
         </div>
 
         <div class="optionsBox">
-            <button class="buttonOpt">
+            <button type="button" class="buttonOpt" id="Experience">
                 Professional Experience
             </button>
             
-            <button class="buttonOpt">
+            <button type="button" class="buttonOpt" id="Projects">
                 Projects
             </button>
            
-            <button class="buttonOpt">
+            <button type="button" class="buttonOpt" id="Photography">
                 Photography
             </button>
 
-            <button class="buttonOpt">
+            <button type="button" class="buttonOpt" id="Contact">
                 Contact
             </button>
         </div>
+    </div>
 
+
+    <!-- Contents -->
+    <div class="pageContents">
+        <div class="subtitle" id="ScrollExperience"> Professional Experience </div>
+
+        <div class="content">
+            Experience...
+            <div style="margin-bottom: 400px;"></div>"
+        </div>
     </div>
 
     <div class="pageContents">
+        <div class="subtitle" id="ScrollProjects"> Projects </div>
 
+        <div class="content">
+            Projects...
+            <div style="margin-bottom: 400px;"></div>"
 
+        </div>
     </div>
-234   
+
+    <div class="pageContents">
+        <div class="subtitle" id="ScrollPhotos"> Contact </div>
+
+        <div class="content">
+            Contacts info...
+            <div style="margin-bottom: 400px;"></div>"
+
+        </div>
+    </div>
+   
     
 </body>
 
