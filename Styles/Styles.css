@@ -34,8 +34,7 @@ a
 
 .subtitle
 {
-    position: absolute;
-    left: 100px;
+    text-align: center;
     /*specifies text to be centered wrt container, child containers centered (in background)*/
     letter-spacing: 0.1cm;
     line-height: 1cm;
