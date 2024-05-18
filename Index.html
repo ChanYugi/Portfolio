@@ -24,8 +24,24 @@
 
 
 <body>    
+
+    <!-- textbot -->
+    <script type="text/javascript">
+        (function(d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function() {
+              window.voiceflow.chat.load({
+                verify: { projectID: '66462deb5913b2dfa0938cbd' },
+                url: 'https://general-runtime.voiceflow.com/',
+                versionID: 'production'
+              });
+            }
+            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+        })(document, 'script');
+      </script>
+
     <!-- Initial page and buttons -->
-    <div class="firstPage">
+    <div class="firstPage" id = "homepage">
         <div class="title">
             Yugi Chan<br>
             3A Waterloo Mechatronics 
@@ -40,19 +56,19 @@
                 Projects
             </button>
            
-            <button type="button" class="buttonOpt" id="Photography">
-                Photography
-            </button>
-
             <button type="button" class="buttonOpt" id="Contact">
                 Contact
+            </button>
+
+            <button type="button" class="buttonOpt" id="Photography">
+                Photography
             </button>
         </div>
     </div>
 
 
     <!-- Contents -->
-    <div class="pageContents">
+    <div class="pageContents" id = "ExperiencePage">
         <div class="subtitle" id="ScrollExperience"> Professional Experience </div>
 
         <div class="content">
@@ -61,7 +77,7 @@
         </div>
     </div>
 
-    <div class="pageContents">
+    <div class="pageContents" id = "ProjectsPage">
         <div class="subtitle" id="ScrollProjects"> Projects </div>
 
         <div class="content">
@@ -71,7 +87,7 @@
         </div>
     </div>
 
-    <div class="pageContents">
+    <div class="pageContents" id = "ContactPage">
         <div class="subtitle" id="ScrollContact"> Contact </div>
 
         <div class="content">
