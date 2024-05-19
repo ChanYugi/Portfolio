@@ -10,6 +10,47 @@ function ScrollClick(Section)
     });
 }
 
+let OldColor;
+let VhUnit = window.visualViewport.height;
+// Background change function
+function ColorScroll() 
+{
+    if(window.scrollY > 5*VhUnit) 
+    {
+        document.body.style.backgroundColor = "lightgrey";
+    } 
+    else if(window.scrollY > 3*VhUnit && window.scrollY <= 5*VhUnit) 
+    {
+        document.body.style.backgroundColor = "lavender";
+    } 
+    else if(window.scrollY > VhUnit && window.scrollY <= 3*VhUnit) 
+    {
+        document.body.style.backgroundColor = "lightcyan";
+    } 
+    else if(window.scrollY <= VhUnit)
+    {
+        document.body.style.backgroundColor = OldColor;
+    }
+}
+
+function ScrollDebounce(Funct, delay)
+{
+    let timer;
+    return function()
+    {
+        clearTimeout(timer);
+        const context = this;
+        const args = arguments;
+
+        timer = setTimeout(function()
+        {
+            return Funct.apply(context,args);
+        }
+        , delay);
+    };
+
+}
+
 // BUTTONS SMOOTH SCROLL
 // Listens for the DOM to be fully oaded
 document.addEventListener("DOMContentLoaded", function() 
@@ -41,29 +82,14 @@ document.addEventListener("DOMContentLoaded", function()
         // parameter is the section title Div ID
         ScrollClick("ScrollContact");      
     });
+
 });
 
-// Background change function
-function ColorScroll(Old,New,UpperBound, LowerBound)
-{
-    window.addEventListener("scroll", function()
-    {
-        if( window.scrollY > UpperBound)
-        {
-            document.body.style.backgroundColor = New;
-        }
-        else if(window.scrollY >= LowerBound && window.scrollY < UpperBound)
-        {
-            document.body.style.backgroundColor = Old;
-        }
-    });
-}
 
-var MainHeight = getComputedStyle(document.body).getPropertyValue('--MainHeight');
-var OldColor;
-var VhUnit = window.visualViewport.height;
 
 // Background Change While scrolling
+// Listens for the DOM to be fully oaded
+
 document.addEventListener("DOMContentLoaded", function() 
 {   
     //stored as a variable in case I choose to change first page color  
@@ -71,10 +97,6 @@ document.addEventListener("DOMContentLoaded", function()
 
     window.addEventListener("scroll", function()
     {
-        ColorScroll(OldColor, "lavender", VhUnit, 0);
-        ColorScroll("lavender", "lightcyan", 3*VhUnit, VhUnit);
-        ColorScroll("lightcyan", "lightgrey", 5*VhUnit, 3*VhUnit);
-
-
+        ScrollDebounce(ColorScroll(), 1000);
     });
 });

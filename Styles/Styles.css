@@ -17,7 +17,7 @@ body
     --MainHeight: 150vh;
 }
 
-.firstPage
+.FirstPage
 {
     width: 100vw;
     height: var(--MainHeight);
@@ -44,13 +44,14 @@ body
     font-weight: 300; 
 }
 
-.subtitle
+.Subtitle
 {
     text-align: center;
     /*specifies text to be centered wrt container, child containers centered (in background)*/
     letter-spacing: 0.1cm;
     line-height: 1cm;
 
+    text-decoration: underline;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
                  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: xx-large;
@@ -59,10 +60,12 @@ body
     font-weight: 300;  
 }
 
-.optionsBox
+.OptionsBox
 {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 200px;
 
@@ -73,7 +76,6 @@ body
     height: 225px;
     margin: 10px;
     padding: 50px;    
-    position: absolute;
 
     /*defining text specifications*/
     letter-spacing: 0.3cm;
@@ -87,7 +89,7 @@ body
 }
 
 
-.buttonOpt
+.ButtonOpt
 {
         
     /*defining container dimensions*/
@@ -111,7 +113,8 @@ body
     font-weight: 100;   
 }
 
-.pageContents
+/* To define container style for each section of content */
+.PageContents
 {
     /* defining section text specs */
     height: var(--PageHeight);
@@ -123,5 +126,21 @@ body
     font-weight: 100;
 }
 
-
+/* To define the layout style of the content inside the content section */
+.Contents
+{
+    position: relative;
+    
+    width: 450px;
+    height: 40px;
+    margin: 10px;
+    padding: 0px;      
+    /* height:  */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+                 Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+}
 
