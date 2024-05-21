@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function()
     document.getElementById("Photography").addEventListener("click", function()
     {
         // parameter is the section title Div ID
-        // sends to endpoint of photography page, needs a back button but later implementtion
+        // document.getElementById
     });
 
     // Listens for the "Contact" button click
@@ -83,13 +83,30 @@ document.addEventListener("DOMContentLoaded", function()
         ScrollClick("ScrollContact");      
     });
 
+    document.getElementById("StickyExperience").addEventListener("click", function()
+    {
+        // parameter is the section title Div ID
+        ScrollClick("ScrollExperience");
+    });
+
+    // Listens for the "Projects" button click
+    document.getElementById("StickyProjects").addEventListener("click", function()
+    {
+        // parameter is the section title Div ID
+        ScrollClick("ScrollProjects");
+    });
+
+    // Listens for the "Contact" button click
+    document.getElementById("StickyContact").addEventListener("click", function()
+    {
+        // parameter is the section title Div ID
+        ScrollClick("ScrollContact");      
+    });
+
 });
-
-
 
 // Background Change While scrolling
 // Listens for the DOM to be fully oaded
-
 document.addEventListener("DOMContentLoaded", function() 
 {   
     //stored as a variable in case I choose to change first page color  
@@ -98,5 +115,33 @@ document.addEventListener("DOMContentLoaded", function()
     window.addEventListener("scroll", function()
     {
         ScrollDebounce(ColorScroll(), 1000);
+    });
+});
+
+function PopBanner()
+{
+    if(window.scrollY < VhUnit)
+    {
+        document.getElementById("Sticky").style.visibility = "hidden";
+        document.getAnimations("Sticky").style.opacity = "0";
+
+    }
+    else if(window.scrollY >= VhUnit)
+    {
+        document.getElementById("Sticky").style.visibility = "visible";
+        document.getAnimations("Sticky").style.opacity = "1";
+    }
+    else
+    {
+        alert('system error');
+    }
+}
+
+//Sticky Banner function
+document.addEventListener("DOMContentLoaded", function() 
+{   
+    window.addEventListener("scroll", function()
+    {
+        PopBanner();
     });
 });

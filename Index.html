@@ -23,7 +23,22 @@
 </head>
 
 
-<body>    
+<body> 
+
+    <!-- Sticky Navigation Tab -->
+    <div class = "StickyBanner" id = "Sticky">
+        <button type= "button" class= "StickyButtons" id= "StickyExperience">
+            Experience
+        </button>
+        
+        <button type= "button" class= "MiddleSticky" id= "StickyProjects">
+            Projects
+        </button>
+
+        <button type= "button" class= "StickyButtons" id= "StickyContact">
+            Contact
+        </button>
+    </div>   
 
     <!-- textbot -->
     <script type="text/javascript">
@@ -38,7 +53,7 @@
             }
             v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
         })(document, 'script');
-      </script>
+    </script>
 
     <!-- Initial page and buttons -->
     <div class="FirstPage" id = "homepage">
@@ -70,12 +85,21 @@
     <!-- Contents -->
     <div class="PageContents" id = "ExperiencePage">
         <!-- Subtitle for section -->
-        <div class="Subtitle" id="ScrollExperience"> Professional Experience </div>
+        <div class="Subtitle" id="ScrollExperience"> Professional Experience </div> <br>
 
         <!-- Actual Content -->
         <div class="Contents">
-            Experience...
-            <div style="margin-bottom: 400px;"></div>"
+            <!-- Mech Design Position -->
+            <div class="DescriptionTitle"> Tesla, Mechanical Designer </div>
+            <div>
+
+            </div>
+
+            <!-- PM Position -->
+            <div class="DescriptionTitle"> Tesla, Project Management Engineering </div>
+            <div>
+
+            </div>
         </div>
     </div>
 
@@ -85,9 +109,17 @@
 
         <!-- Actual Content -->
         <div class="Contents">
-            Projects...
-            <div style="margin-bottom: 400px;"></div>"
+            <!-- Embedded Systems Project -->
+            <div class="DescriptionTitle"> Two-Axis Machine </div>
+            <div>
 
+            </div>
+
+            <!-- Image Processing Project-->
+            <div class="DescriptionTitle"> X-Ray Fracture Detector </div>
+            <div>
+
+            </div>
         </div>
     </div>
 
@@ -97,9 +129,10 @@
 
         <!-- Actual Content -->
         <div class="Contents">
-            Contacts info...
-            <div style="margin-bottom: 400px;"></div>"
+            <div class="DescriptionTitle">  </div>
+            <div>
 
+            </div>
         </div>
     </div>
    

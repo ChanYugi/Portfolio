@@ -6,7 +6,11 @@ a
 
 body
 {
-    background-color: powderblue;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    background-color: powderblue;
     transition: background-color 1.5s ease;
 }
 
@@ -15,6 +19,63 @@ body
 {
     --PageHeight: 200vh;
     --MainHeight: 150vh;
+}
+
+/* banner style */
+.StickyBanner
+{
+    visibility:hidden; 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:sticky;
+    top: 20px;
+
+    /* border-color: darkslategray; */
+    border-radius: 20px;
+    width: 60vw;
+    height: 5vh;
+    background-color: white;
+}
+
+/* buttons for sticky banner needs updated style */
+.StickyButtons
+{
+    margin: 0px;  
+    width: 20vw;
+    height: 5vh;
+    border: 0px;;
+    border-radius: 20px;
+
+    background-color: white;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+                 Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+}
+
+.MiddleSticky
+{
+    
+    margin: 0px;  
+    width: 20vw;
+    height: 5vh;
+    /* border: 0px;; */
+    border-block-width: 0px;
+    border-inline-width: 1px;
+
+    background-color: white;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+                 Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
 }
 
 .FirstPage
@@ -62,6 +123,7 @@ body
 
 .OptionsBox
 {
+    border-radius: 45px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,7 +134,7 @@ body
     background-color: white;
     
     /*defining container dimensions*/
-    width: 500px;
+    width: 650px;
     height: 225px;
     margin: 10px;
     padding: 50px;    
@@ -93,13 +155,15 @@ body
 {
         
     /*defining container dimensions*/
-    width: 450px;
+    width: 500px;
     height: 40px;
     margin: 10px;
     padding: 0px;    
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 14px;
+    border-width: 1px;
 
     /*defining text specifications*/
     letter-spacing: 0.25cm;
@@ -116,6 +180,7 @@ body
 /* To define container style for each section of content */
 .PageContents
 {
+    width: 80vw;
     /* defining section text specs */
     height: var(--PageHeight);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -129,9 +194,9 @@ body
 /* To define the layout style of the content inside the content section */
 .Contents
 {
-    position: relative;
     
-    width: 450px;
+    
+    width: 90;
     height: 40px;
     margin: 10px;
     padding: 0px;      
