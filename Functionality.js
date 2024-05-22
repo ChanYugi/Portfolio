@@ -6,7 +6,7 @@ function ScrollClick(Section)
 {
     document.getElementById(Section).scrollIntoView
     ({
-        behavior: "smooth", block: "center", inline: "center"
+        behavior: "smooth", block:"center", inline: "center"
     });
 }
 
@@ -15,17 +15,22 @@ let VhUnit = window.visualViewport.height;
 // Background change function
 function ColorScroll() 
 {
-    if(window.scrollY > 5*VhUnit) 
+    if(window.screenY > 5*VhUnit)
     {
         document.body.style.backgroundColor = "lightgrey";
-    } 
-    else if(window.scrollY > 3*VhUnit && window.scrollY <= 5*VhUnit) 
+        alert('hi');
+    }
+    else if(window.scrollY > 4*VhUnit && window.scrollY <= 5*VhUnit) 
     {
         document.body.style.backgroundColor = "lavender";
     } 
-    else if(window.scrollY > VhUnit && window.scrollY <= 3*VhUnit) 
+    else if(window.scrollY > 2*VhUnit && window.scrollY <= 4*VhUnit) 
     {
-        document.body.style.backgroundColor = "lightcyan";
+        document.body.style.backgroundColor = "lightsteelblue";
+    } 
+    else if(window.scrollY > VhUnit && window.scrollY <= 2*VhUnit) 
+    {
+        document.body.style.backgroundColor = "powderblue";
     } 
     else if(window.scrollY <= VhUnit)
     {
@@ -55,6 +60,13 @@ function ScrollDebounce(Funct, delay)
 // Listens for the DOM to be fully oaded
 document.addEventListener("DOMContentLoaded", function() 
 {
+    // Listens for the "AboutMe" button click
+    document.getElementById("AboutMe").addEventListener("click", function()
+    {
+        // parameter is the section title Div ID
+        ScrollClick("ScrollAbout");
+    });
+
     // Listens for the "Experience" button click
     document.getElementById("Experience").addEventListener("click", function()
     {
@@ -81,6 +93,12 @@ document.addEventListener("DOMContentLoaded", function()
     {
         // parameter is the section title Div ID
         ScrollClick("ScrollContact");      
+    });
+
+    document.getElementById("StickyAbout").addEventListener("click", function()
+    {
+        // parameter is the section title Div ID
+        ScrollClick("ScrollAbout");
     });
 
     document.getElementById("StickyExperience").addEventListener("click", function()
@@ -123,13 +141,11 @@ function PopBanner()
     if(window.scrollY < VhUnit)
     {
         document.getElementById("Sticky").style.visibility = "hidden";
-        document.getAnimations("Sticky").style.opacity = "0";
 
     }
     else if(window.scrollY >= VhUnit)
     {
         document.getElementById("Sticky").style.visibility = "visible";
-        document.getAnimations("Sticky").style.opacity = "1";
     }
     else
     {

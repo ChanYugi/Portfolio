@@ -4,8 +4,8 @@
 <head>
     <title>Yugi Chan</title>
     <meta charset="UTF-8">
-    <meta name="author" content="Yugi">
-    <meta name="description" content="Work Experiences and More">
+    <meta name="Author" content="Yugi">
+    <meta name="Description" content="Work Experiences and More">
 
     <!-- include css library -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
@@ -27,11 +27,15 @@
 
     <!-- Sticky Navigation Tab -->
     <div class = "StickyBanner" id = "Sticky">
-        <button type= "button" class= "StickyButtons" id= "StickyExperience">
+        <button type= "button" class= "StickyButtons" id= "StickyAbout">
+            About Me
+        </button>
+
+        <button type= "button" class= "MiddleLeftSticky" id= "StickyExperience">
             Experience
         </button>
         
-        <button type= "button" class= "MiddleSticky" id= "StickyProjects">
+        <button type= "button" class= "MiddleRightSticky" id= "StickyProjects">
             Projects
         </button>
 
@@ -64,6 +68,10 @@
 
         <!-- Button Selections -->
         <div class="OptionsBox">
+            <button type="button" class="ButtonOpt" id="AboutMe">
+                About Me 
+            </button>
+
             <button type="button" class="ButtonOpt" id="Experience">
                 Professional Experience
             </button>
@@ -83,60 +91,92 @@
     </div>
 
     <!-- Contents -->
-    <div class="PageContents" id = "ExperiencePage">
+    <div class="PageAbout" id = "AboutPage">
         <!-- Subtitle for section -->
-        <div class="Subtitle" id="ScrollExperience"> Professional Experience </div> <br>
-
-        <!-- Actual Content -->
-        <div class="Contents">
-            <!-- Mech Design Position -->
-            <div class="DescriptionTitle"> Tesla, Mechanical Designer </div>
-            <div>
-
-            </div>
-
-            <!-- PM Position -->
-            <div class="DescriptionTitle"> Tesla, Project Management Engineering </div>
-            <div>
-
+        <div class="Subtitle" id="ScrollAbout"> About Me!</div>
+        <div class="Grid">
+            <div class="Grid-About">
+                <div class="Contents">
+                    Hi there! My name is Yugi Chan (as you can probably figure from the page), and I am a third-year 
+                    Mechatronics Engineering student at the University of Waterloo. I am more experienced in 
+                    Mechanical, Manufacturing, and the traditional Engineering industry, but I am always looking to 
+                    learn! So, watch as I tackle more challenges and grow :) 
+                </div>
             </div>
         </div>
     </div>
+    
+    <div class="PageContentLong" id = "ExperiencePage">
+        <!-- Subtitle for section -->
+        <div class="Subtitle" id="ScrollExperience"> Professional Experience </div>
 
-    <div class="PageContents" id = "ProjectsPage">
+        <!-- Actual Content -->
+        <div class="Grid">
+            <div class="Grid-Content-Description">
+                <!-- Actual Content -->
+                <div class="Contents">
+                    <!-- Mech Design Position -->
+                    <div class="DescriptionTitle"> Tesla | Mechanical Designer </div><br>
+                    <div class="Description">
+                        •Designed precision instruments using SOLIDWORKS servo-driven systems, saving $100,000 per hour in downtime<br>
+                        •Fabricated 3D-printed ultrasonic sensor system using version control frameworks to mitigate significant losses<br>
+                        •Worked with different suppliers to coordinate desired surface finishes for corrosion prevention on mechanical systems<br>
+                        •Conducted reliability testing for a profilometer sensor to validate product data for manufacturing lines<br>
+                        •Analyzed and validated vision system data to improve cell manufacturing calibrations and product reliability<br>
+                        •Coordinated and analyzed Proof of Principle tests with various statistical models to prototype manufacturing solutions<br>
+                        •Managed photoelectric sensors to collect data and perform engineering calculations to validate processes<br>
+                        •Created numerous SOPs and comprehensive reports to visualize data and present analytical findings<br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="Grid">
+            <div class="Grid-Content-Description">
+                <!-- Actual Content -->
+                <div class="Contents">
+                    <!-- PM Position -->
+                    <div class="DescriptionTitle"> Tesla | Project Management Engineering </div><br>
+                    <div class="Description">
+                        •Planned timelines of various projects by querying SQL databases to update necessary data to track project progress<br>
+                        •Coordinated with various suppliers to facilitate transactions by maintaining excellent inventory and resource management<br>
+                        •Developed manufacturing routings for part fabrication to satisfy project demands and subassemblies<br>
+                        •Managed projects from ideation to completion by setting BOMs, timelines, and priorities using Excel and ERP systems<br>
+                    </div>
+                </div>
+            </div>
+        </div>            
+    </div>
+
+    <div class="PageContentShort" id = "ProjectsPage">
         <!-- Subtitle for section -->
         <div class="Subtitle" id="ScrollProjects"> Projects </div>
 
-        <!-- Actual Content -->
-        <div class="Contents">
-            <!-- Embedded Systems Project -->
-            <div class="DescriptionTitle"> Two-Axis Machine </div>
-            <div>
-
-            </div>
-
-            <!-- Image Processing Project-->
-            <div class="DescriptionTitle"> X-Ray Fracture Detector </div>
-            <div>
-
-            </div>
+        <div class="Grid-Projects">
+            <!-- Actual Content, each child element is a project -->
+            <div class="Grid-Project-Item"></div>
+            <div class="Grid-Project-Item"></div>
+            <div class="Grid-Project-Item"></div>
+            <div class="Grid-Project-Item"></div>
+            <div class="Grid-Project-Item"></div>  
+            <div class="Grid-Project-Item"></div>
+            <div class="Grid-Project-Item"></div>
+            <div class="Grid-Project-Item"></div>
+            <div class="Grid-Project-Item"></div>
+            <div class="Grid-Project-Item"></div>  
         </div>
     </div>
 
-    <div class="PageContents" id = "ContactPage">
+    <div class="PageContentShort" id = "ContactPage">
         <!-- Subtitle for section -->
         <div class="Subtitle" id="ScrollContact"> Contact </div>
-
-        <!-- Actual Content -->
-        <div class="Contents">
-            <div class="DescriptionTitle">  </div>
-            <div>
-
+        <div class="Grid">
+            <div class="Grid-Content-Description">
+                <!-- Actual Content -->
+                
             </div>
         </div>
-    </div>
-   
-    
+    </div>    
 </body>
 
 </html>

@@ -6,19 +6,21 @@ a
 
 body
 {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;    background-color: powderblue;
+    align-items: center;    background-color: lightcyan;
     transition: background-color 1.5s ease;
 }
 
 /*variable to be used for scroll condition and modularity*/
 :root
 {
-    --PageHeight: 200vh;
     --MainHeight: 150vh;
+    --PageAbout: 100vh;
+    --PageHeightShort: 150vh;
+    --PageHeightLong: 200vh;
+
 }
 
 /* banner style */
@@ -34,7 +36,7 @@ body
 
     /* border-color: darkslategray; */
     border-radius: 20px;
-    width: 60vw;
+    width: 80vw;
     height: 5vh;
     background-color: white;
 }
@@ -58,16 +60,15 @@ body
     font-weight: 100;
 }
 
-.MiddleSticky
+.MiddleLeftSticky
 {
     
     margin: 0px;  
     width: 20vw;
     height: 5vh;
-    /* border: 0px;; */
-    border-block-width: 0px;
     border-inline-width: 1px;
-
+    border-block-width: 0px;
+    
     background-color: white;
 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -78,13 +79,27 @@ body
     font-weight: 100;
 }
 
-.FirstPage
+.MiddleRightSticky
 {
-    width: 100vw;
-    height: var(--MainHeight);
-    display: flex;
-    justify-content: center;
+    
+    margin: 0px;  
+    width: 20vw;
+    height: 5vh;
+    border-right-width: 1px;    
+    border-left-width: 0px;    
+    border-block-width: 0px;
+
+    
+    background-color: white;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+                 Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
 }
+
 
 .title
 {
@@ -107,6 +122,7 @@ body
 
 .Subtitle
 {
+    height: 70px;
     text-align: center;
     /*specifies text to be centered wrt container, child containers centered (in background)*/
     letter-spacing: 0.1cm;
@@ -135,7 +151,7 @@ body
     
     /*defining container dimensions*/
     width: 650px;
-    height: 225px;
+    height: 260px;
     margin: 10px;
     padding: 50px;    
 
@@ -177,12 +193,20 @@ body
     font-weight: 100;   
 }
 
-/* To define container style for each section of content */
-.PageContents
+.FirstPage
 {
-    width: 80vw;
+    width: 100vw;
+    height: var(--MainHeight);
+    display: flex;
+    justify-content: center;
+}
+
+/* To define container style for each section of content */
+.PageContentLong
+{
+    width: 100vw;
     /* defining section text specs */
-    height: var(--PageHeight);
+    height: var(--PageHeightLong);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
                  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: medium;
@@ -191,21 +215,113 @@ body
     font-weight: 100;
 }
 
-/* To define the layout style of the content inside the content section */
-.Contents
+.PageContentShort
 {
-    
-    
-    width: 90;
-    height: 40px;
-    margin: 10px;
-    padding: 0px;      
-    /* height:  */
+    width: 100vw;
+    /* defining section text specs */
+    height: var(--PageHeightShort);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
                  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-variant: small-caps;
+    font-weight: 100;
+}
+
+.PageAbout
+{
+    width: 100vw;
+    /* defining section text specs */
+    height: var(--PageAbout);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+                 Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-variant: small-caps;
+    font-weight: 100;
+}
+/* To define the layout style of the content inside the content section */
+.Grid
+{
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(1,1fr);
+    gap: 16px;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.Grid-About
+{
+    grid-column: 4/13;
+    text-wrap: wrap;
+}
+
+.Grid-Content-Description
+{
+    grid-column: 6/15;
+    margin: 10px;
+    padding: 0px;       
+}
+
+.Grid-Content-Image
+{
+    grid-column: 1/5;
+}
+
+.Grid-Projects
+{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 30px;
+    border-width: 2px;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.Grid-Project-Item:nth-child(n)
+{
+    background-color: white;
+    border-radius: 15px;
+    opacity: 0.2;;
+}
+
+.AboutContent
+{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: medium;
     font-style: normal;
     font-variant: normal;
     font-weight: 100;
 }
+
+.Contents
+{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+}
+
+.DescriptionTitle
+{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+}
+
+.Description
+{
+    line-height: 1cm;;
+}
+
 
