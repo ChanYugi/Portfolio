@@ -15,12 +15,11 @@ let VhUnit = window.visualViewport.height;
 // Background change function
 function ColorScroll() 
 {
-    if(window.screenY > 5*VhUnit)
+    if(window.scrollY > 5.75*VhUnit)
     {
         document.body.style.backgroundColor = "lightgrey";
-        alert('hi');
     }
-    else if(window.scrollY > 4*VhUnit && window.scrollY <= 5*VhUnit) 
+    else if(window.scrollY > 4*VhUnit && window.scrollY <= 5.75*VhUnit) 
     {
         document.body.style.backgroundColor = "lavender";
     } 

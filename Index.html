@@ -9,10 +9,9 @@
 
     <!-- include css library -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    
-    <script src="jquery-3.7.1.js">  </script>
-
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+            crossorigin="anonymous">
+    </script>
     
     <!-- include functionality js file -->
     <script src="Functionality.js" async></script>
@@ -94,13 +93,16 @@
     <div class="PageAbout" id = "AboutPage">
         <!-- Subtitle for section -->
         <div class="Subtitle" id="ScrollAbout"> About Me!</div>
-        <div class="Grid">
-            <div class="Grid-About">
-                <div class="Contents">
-                    Hi there! My name is Yugi Chan (as you can probably figure from the page), and I am a third-year 
-                    Mechatronics Engineering student at the University of Waterloo. I am more experienced in 
-                    Mechanical, Manufacturing, and the traditional Engineering industry, but I am always looking to 
-                    learn! So, watch as I tackle more challenges and grow :) 
+        <div class="GridContainer">
+            <div class="Grid">
+                <div class="GridAbout">
+                    <div class="Contents">
+                        Hi there! My name is Yugi Chan (as you can probably figure from the page), and I am a third-year 
+                        Mechatronics Engineering student at the University of Waterloo. My experience is tailored towards 
+                        Manufacturing and more Mechanical/traditional Engineering. With that being said, I have really 
+                        taken an interest in data management and software implementations! I plan to use this website as 
+                        a starting reference and to track my continual progress :D
+                    </div>
                 </div>
             </div>
         </div>
@@ -108,17 +110,18 @@
     
     <div class="PageContentLong" id = "ExperiencePage">
         <!-- Subtitle for section -->
-        <div class="Subtitle" id="ScrollExperience"> Professional Experience </div>
+        <div class="Subtitle" id="ScrollExperience"> Professional Experience </div> <br>
 
         <!-- Actual Content -->
         <div class="Grid">
-            <div class="Grid-Content-Description">
+            <div class="GridContentDescription">
                 <!-- Actual Content -->
                 <div class="Contents">
                     <!-- Mech Design Position -->
                     <div class="DescriptionTitle"> Tesla | Mechanical Designer </div><br>
                     <div class="Description">
-                        •Designed precision instruments using SOLIDWORKS servo-driven systems, saving $100,000 per hour in downtime<br>
+                        •Designed precision instruments in SOLIDWORKS for servo systems, preventing tens of thousands of dollars 
+                         in downtime<br>
                         •Fabricated 3D-printed ultrasonic sensor system using version control frameworks to mitigate significant losses<br>
                         •Worked with different suppliers to coordinate desired surface finishes for corrosion prevention on mechanical systems<br>
                         •Conducted reliability testing for a profilometer sensor to validate product data for manufacturing lines<br>
@@ -132,7 +135,7 @@
         </div>
         
         <div class="Grid">
-            <div class="Grid-Content-Description">
+            <div class="GridContentDescription">
                 <!-- Actual Content -->
                 <div class="Contents">
                     <!-- PM Position -->
@@ -152,18 +155,16 @@
         <!-- Subtitle for section -->
         <div class="Subtitle" id="ScrollProjects"> Projects </div>
 
-        <div class="Grid-Projects">
-            <!-- Actual Content, each child element is a project -->
-            <div class="Grid-Project-Item"></div>
-            <div class="Grid-Project-Item"></div>
-            <div class="Grid-Project-Item"></div>
-            <div class="Grid-Project-Item"></div>
-            <div class="Grid-Project-Item"></div>  
-            <div class="Grid-Project-Item"></div>
-            <div class="Grid-Project-Item"></div>
-            <div class="Grid-Project-Item"></div>
-            <div class="Grid-Project-Item"></div>
-            <div class="Grid-Project-Item"></div>  
+        <div class="GridContainer">
+            <div class="GridProjects">
+                <!-- Actual Content, each child element is a project -->
+                <div class="GridProjectItem">Two-Axis Machine</div>
+                <div class="GridProjectItem">X-Ray Fracture Detector</div>
+                <div class="GridProjectItem">PC Build Projects</div>
+                <div class="GridProjectItem">Work-In-Progress</div>
+                <div class="GridProjectItem">Work-In-Progress</div>
+                <div class="GridProjectItem">Work-In-Progress</div>
+            </div>
         </div>
     </div>
 
@@ -171,12 +172,22 @@
         <!-- Subtitle for section -->
         <div class="Subtitle" id="ScrollContact"> Contact </div>
         <div class="Grid">
-            <div class="Grid-Content-Description">
+            <div class="GridContentDescription">
                 <!-- Actual Content -->
                 
             </div>
         </div>
-    </div>    
+    </div> 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() 
+        {
+            var position = window.scrollY;        
+            window.onscroll = function()                
+            {
+                console.log('Scroll Position:', position);
+            }
+        });
+    </script>   
 </body>
 
 </html>
