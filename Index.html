@@ -100,8 +100,9 @@
                         Hi there! My name is Yugi Chan (as you can probably figure from the page), and I am a third-year 
                         Mechatronics Engineering student at the University of Waterloo. My experience is tailored towards 
                         Manufacturing and more Mechanical/traditional Engineering. With that being said, I have really 
-                        taken an interest in data management and software implementations! I plan to use this website as 
-                        a starting reference and to track my continual progress :D
+                        taken an interest in data management, software design, and program optimization! As a start, I 
+                        decided to build this website from the ground up to learn more about front-end development and 
+                        have a place to showcase my experiences and projects!
                     </div>
                 </div>
             </div>
@@ -110,41 +111,67 @@
     
     <div class="PageContentLong" id = "ExperiencePage">
         <!-- Subtitle for section -->
-        <div class="Subtitle" id="ScrollExperience"> Professional Experience </div> <br>
+        <div class="Subtitle" id="ScrollExperience"> Professional Experience </div>
 
         <!-- Actual Content -->
         <div class="Grid">
+            <div class="GridContentImage">
+                <br>
+                <video controls autoplay muted loop>
+                    <source src="CellManufacturing.webm">
+                </video>
+            </div>
             <div class="GridContentDescription">
                 <!-- Actual Content -->
                 <div class="Contents">
                     <!-- Mech Design Position -->
-                    <div class="DescriptionTitle"> Tesla | Mechanical Designer </div><br>
+                    <div class="DescriptionTitle"> Tesla | Mechanical Designer </div>
+                    <div class="DescriptionDetail"> Markham, Ontario | September 2023 - Decemeber 2023</div>
                     <div class="Description">
-                        •Designed precision instruments in SOLIDWORKS for servo systems, preventing tens of thousands of dollars 
-                         in downtime<br>
-                        •Fabricated 3D-printed ultrasonic sensor system using version control frameworks to mitigate significant losses<br>
-                        •Worked with different suppliers to coordinate desired surface finishes for corrosion prevention on mechanical systems<br>
-                        •Conducted reliability testing for a profilometer sensor to validate product data for manufacturing lines<br>
-                        •Analyzed and validated vision system data to improve cell manufacturing calibrations and product reliability<br>
-                        •Coordinated and analyzed Proof of Principle tests with various statistical models to prototype manufacturing solutions<br>
-                        •Managed photoelectric sensors to collect data and perform engineering calculations to validate processes<br>
-                        •Created numerous SOPs and comprehensive reports to visualize data and present analytical findings<br>
+                        •Designed precision instruments in SOLIDWORKS for servo systems, preventing tens of thousands of
+                         dollars in downtime<br>
+                        •Fabricated 3D-printed ultrasonic sensor system using version control frameworks to mitigate
+                         significant losses<br>
+                        •Worked with different suppliers to coordinate desired surface finishes for corrosion prevention
+                         on mechanical systems<br>
+                        •Conducted reliability testing for a profilometer sensor to validate product data for
+                         manufacturing lines<br>
+                        •Analyzed and validated vision system data to improve cell manufacturing calibrations and product
+                         reliability<br>
+                        •Coordinated and analyzed Proof of Principle tests with various statistical models to prototype
+                         manufacturing solutions<br>
+                        •Managed photoelectric sensors to collect data and perform engineering calculations to validate
+                         processes<br>
+                        •Created numerous SOPs and comprehensive reports to visualize data and present analytical
+                         findings<br>
                     </div>
                 </div>
             </div>
         </div>
         
         <div class="Grid">
+            <div class="GridContentImage">
+                <br>
+                <video controls autoplay muted loop>
+                    <source src="CellManufacturingPM.webm">
+                </video>
+            </div>
             <div class="GridContentDescription">
                 <!-- Actual Content -->
                 <div class="Contents">
                     <!-- PM Position -->
-                    <div class="DescriptionTitle"> Tesla | Project Management Engineering </div><br>
+                    <div class="DescriptionTitle"> Tesla | Project Management Engineering </div>
+                    <div class="DescriptionDetail"> Richmond Hill, Ontario | January 2023 - April 2023</div>
                     <div class="Description">
-                        •Planned timelines of various projects by querying SQL databases to update necessary data to track project progress<br>
-                        •Coordinated with various suppliers to facilitate transactions by maintaining excellent inventory and resource management<br>
-                        •Developed manufacturing routings for part fabrication to satisfy project demands and subassemblies<br>
-                        •Managed projects from ideation to completion by setting BOMs, timelines, and priorities using Excel and ERP systems<br>
+                        •Planned timelines of various projects by querying SQL databases to update necessary data to track
+                         project progress<br>
+                        •Coordinated with various suppliers to facilitate transactions by maintaining excellent inventory
+                         and resource management<br>
+                        •Developed manufacturing routings for part fabrication to satisfy project demands and
+                         subassemblies<br>
+                        •Managed projects from ideation to completion by setting BOMs, timelines, and priorities using
+                         Excel and ERP systems<br>
+                        •Overhauled SOP documents to create a more comprehensive and improve clarity for future interns<br>
                     </div>
                 </div>
             </div>
@@ -158,12 +185,12 @@
         <div class="GridContainer">
             <div class="GridProjects">
                 <!-- Actual Content, each child element is a project -->
-                <div class="GridProjectItem">Two-Axis Machine</div>
-                <div class="GridProjectItem">X-Ray Fracture Detector</div>
-                <div class="GridProjectItem">PC Build Projects</div>
-                <div class="GridProjectItem">Work-In-Progress</div>
-                <div class="GridProjectItem">Work-In-Progress</div>
-                <div class="GridProjectItem">Work-In-Progress</div>
+                <button class="GridProjectItem" id="TwoAxis">Two-Axis Machine</button>
+                <button class="GridProjectItem" id="XRay">X-Ray Fracture Detector</button>
+                <button class="GridProjectItem" id="PCBuild">PC Build Projects</button>
+                <button class="GridProjectItem" id="WIP1">Work-In-Progress</button>
+                <button class="GridProjectItem" id="WIP2">Work-In-Progress</button>
+                <button class="GridProjectItem" id="WIP3">Work-In-Progress</button>
             </div>
         </div>
     </div>

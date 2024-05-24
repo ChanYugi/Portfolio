@@ -1,40 +1,20 @@
 
 //parameter definition for function
-let Section = ""
+let Section = "";
+
 // function to scroll
 function ScrollClick(Section)
 {
-    document.getElementById(Section).scrollIntoView
-    ({
-        behavior: "smooth", block:"center", inline: "center"
-    });
-}
+    let WindowHeight = 0.1*window.innerHeight;
+    let SectionHeight = document.getElementById(Section).offsetTop;
+    let TotalHeight = SectionHeight - WindowHeight;
 
-let OldColor;
-let VhUnit = window.visualViewport.height;
-// Background change function
-function ColorScroll() 
-{
-    if(window.scrollY > 5.75*VhUnit)
-    {
-        document.body.style.backgroundColor = "lightgrey";
-    }
-    else if(window.scrollY > 4*VhUnit && window.scrollY <= 5.75*VhUnit) 
-    {
-        document.body.style.backgroundColor = "lavender";
-    } 
-    else if(window.scrollY > 2*VhUnit && window.scrollY <= 4*VhUnit) 
-    {
-        document.body.style.backgroundColor = "lightsteelblue";
-    } 
-    else if(window.scrollY > VhUnit && window.scrollY <= 2*VhUnit) 
-    {
-        document.body.style.backgroundColor = "powderblue";
-    } 
-    else if(window.scrollY <= VhUnit)
-    {
-        document.body.style.backgroundColor = OldColor;
-    }
+    window.scrollTo
+    ({
+        top: TotalHeight,
+        left: 0,
+        behavior: "smooth"
+    });
 }
 
 function ScrollDebounce(Funct, delay)
@@ -54,6 +34,7 @@ function ScrollDebounce(Funct, delay)
     };
 
 }
+
 
 // BUTTONS SMOOTH SCROLL
 // Listens for the DOM to be fully oaded
@@ -122,6 +103,42 @@ document.addEventListener("DOMContentLoaded", function()
 
 });
 
+
+let OldColor;
+let VhUnit = window.visualViewport.height;
+// Background change function
+function ColorScroll() 
+{
+    let WindowHeight = 0.25*window.innerHeight;
+
+    let AboutHeight = document.getElementById("AboutPage").offsetTop - WindowHeight;
+    let ExperienceHeight = document.getElementById("ExperiencePage").offsetTop - WindowHeight;
+    let ProjectHeight = document.getElementById("ProjectsPage").offsetTop - WindowHeight;
+    let ContactHeight = document.getElementById("ContactPage").offsetTop - WindowHeight;
+
+
+    if(window.scrollY > ContactHeight)
+    {
+        document.body.style.backgroundColor = "lightgrey";
+    }
+    else if(window.scrollY > ProjectHeight && window.scrollY <= ContactHeight) 
+    {
+        document.body.style.backgroundColor = "lavender";
+    } 
+    else if(window.scrollY > ExperienceHeight && window.scrollY <= ProjectHeight) 
+    {
+        document.body.style.backgroundColor = "lightblue";
+    } 
+    else if(window.scrollY > AboutHeight && window.scrollY <= ExperienceHeight) 
+    {
+        document.body.style.backgroundColor = "paleturquoise";
+    } 
+    else if(window.scrollY <= AboutHeight)
+    {
+        document.body.style.backgroundColor = OldColor;
+    }
+}
+
 // Background Change While scrolling
 // Listens for the DOM to be fully oaded
 document.addEventListener("DOMContentLoaded", function() 
@@ -160,3 +177,31 @@ document.addEventListener("DOMContentLoaded", function()
         PopBanner();
     });
 });
+
+//Changes icon opacity when mouse is over element
+function ProjectHover(ProjectID)
+{
+    document.getElementById(ProjectID).addEventListener("mouseover", function()
+    {
+        //Changes Opacity of grid element and option to view mmore
+        document.getElementById(ProjectID).style.opacity = 1;
+    });
+
+    document.getElementById(ProjectID).addEventListener("mouseout", function()
+    {
+        //Changes Opacity of grid element and option to view mmore
+        document.getElementById(ProjectID).style.opacity = 0.7;
+    });
+}
+
+//Project Icon Hover
+document.addEventListener("DOMContentLoaded", function()
+{
+    ProjectHover("TwoAxis");
+    ProjectHover("XRay");
+    ProjectHover("PCBuild");
+    ProjectHover("WIP1");
+    ProjectHover("WIP2");
+    ProjectHover("WIP3")
+});
+
