@@ -100,7 +100,36 @@ document.addEventListener("DOMContentLoaded", function()
         // parameter is the section title Div ID
         ScrollClick("ScrollContact");      
     });
+});
 
+
+//Project Button Links
+document.addEventListener("DOMContentLoaded", function() 
+{
+    // Listens for the "Two Axis Project" button click
+    document.getElementById("TwoAxis").addEventListener("click", function(event)
+    {
+        event.preventDefault();
+        window.location.href = 'TwoAxisMachine.html';
+    });
+
+    document.getElementById("XRay").addEventListener("click", function(event)
+    {
+        event.preventDefault();
+        window.location.href = 'XRayFractureDetector.html';
+    });
+
+    document.getElementById("PCBuild").addEventListener("click", function(event)
+    {
+        event.preventDefault();
+        window.location.href = 'PCBuilds.html';
+    });
+
+    document.getElementById("Photography").addEventListener("click", function(event)
+    {
+        event.preventDefault();
+        window.location.href = 'Photography.html';
+    });
 });
 
 
