@@ -19,6 +19,11 @@ video
     width: 100%;
 }
 
+button
+{
+    cursor: pointer;
+}
+
 /*variable to be used for scroll condition and modularity*/
 :root
 {

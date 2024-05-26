@@ -2,21 +2,25 @@
 <html lang = "en">
 
 <head>
-    <title>Yugi Chan</title>
+    <title>Projects</title>
     <meta charset="UTF-8">
-    <meta name="author" content="Yugi">
-    <meta name="description" content="Photos">
+    <meta name="Author" content="Yugi">
+    <meta name="Description" content="XRay Frature Detector">
 
     <!-- include css library -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
             crossorigin="anonymous">
     </script>
-    
+
     <link rel="stylesheet" href="Styles/Styles.css">
 </head>
 
+
 <body>
+
 
     
 </body>
+
+</html>
