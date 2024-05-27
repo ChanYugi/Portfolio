@@ -108,7 +108,7 @@
         </div>
     </div>
     
-    <div class="PageContentLong" id = "ExperiencePage">
+    <div class="PageExperience" id = "ExperiencePage">
         <!-- Subtitle for section -->
         <div class="Subtitle" id="ScrollExperience"> Professional Experience </div>
 
@@ -178,7 +178,7 @@
         </div>            
     </div>
 
-    <div class="PageContentShort" id = "ProjectsPage">
+    <div class="PageProjects" id = "ProjectsPage">
         <!-- Subtitle for section -->
         <div class="Subtitle" id="ScrollProjects"> Projects </div>
 
@@ -195,26 +195,35 @@
         </div>
     </div>
 
-    <div class="PageContentShort" id = "ContactPage">
+    <div class="PageContact" id = "ContactPage">
         <!-- Subtitle for section -->
         <div class="Subtitle" id="ScrollContact"> Contact </div>
-        <div class="Grid">
-            <div class="GridContentDescription">
-                <!-- Actual Content -->
-                
+        <div class="GridContainer">
+            <div class="GridContact">
+                <!-- <div class="GridItems"> -->                    
+                    <button type="button" class="ContactInfo" id="EmailButton">
+                        <!-- placeholder for icons -->
+                        <!-- <img src=""> -->
+                        Email
+                    </button>
+
+                    <button type="button" class="ContactInfo" id="LinkedInButton">
+                        <!-- placeholder for icons -->
+                        LinkedIn
+                    </button>
+
+                    <button type="button" class="ContactInfo" id="GitHubButton">
+                        <!-- placeholder for icons -->
+                        GitHub
+                    </button>
+
+                    <button type="button" class="ContactInfo" id="LeetCodeButton">
+                        <!-- placeholder for icons -->
+                        LeetCode
+                    </button>
             </div>
         </div>
     </div> 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() 
-        {
-            var position = window.scrollY;        
-            window.onscroll = function()                
-            {
-                console.log('Scroll Position:', position);
-            }
-        });
-    </script>   
 </body>
 
 </html>

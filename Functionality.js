@@ -17,6 +17,7 @@ function ScrollClick(Section)
     });
 }
 
+//function to debounce scroll
 function ScrollDebounce(Funct, delay)
 {
     let timer;
@@ -35,6 +36,53 @@ function ScrollDebounce(Funct, delay)
 
 }
 
+// function to change background colour with scroll 
+let OldColor;
+let VhUnit = window.visualViewport.height;
+function ColorScroll() 
+{
+    let WindowHeight = 0.25*window.innerHeight;
+
+    let AboutHeight = document.getElementById("AboutPage").offsetTop - WindowHeight;
+    let ExperienceHeight = document.getElementById("ExperiencePage").offsetTop - WindowHeight;
+    let ProjectHeight = document.getElementById("ProjectsPage").offsetTop - WindowHeight;
+    let ContactHeight = document.getElementById("ContactPage").offsetTop - WindowHeight;
+
+
+    if(window.scrollY > ContactHeight)
+    {
+        document.body.style.backgroundColor = "lightgrey";
+    }
+    else if(window.scrollY > ProjectHeight && window.scrollY <= ContactHeight) 
+    {
+        document.body.style.backgroundColor = "lavender";
+    } 
+    else if(window.scrollY > ExperienceHeight && window.scrollY <= ProjectHeight) 
+    {
+        document.body.style.backgroundColor = "lightblue";
+    } 
+    else if(window.scrollY > AboutHeight && window.scrollY <= ExperienceHeight) 
+    {
+        document.body.style.backgroundColor = "paleturquoise";
+    } 
+    else if(window.scrollY <= AboutHeight)
+    {
+        document.body.style.backgroundColor = OldColor;
+    }
+}
+
+// Background Change While scrolling
+// Listens for the DOM to be fully oaded
+document.addEventListener("DOMContentLoaded", function() 
+{   
+    //stored as a variable in case I choose to change first page color  
+    OldColor = document.body.style.backgroundColor; 
+
+    window.addEventListener("scroll", function()
+    {
+        ScrollDebounce(ColorScroll(), 1000);
+    });
+});
 
 // BUTTONS SMOOTH SCROLL
 // Listens for the DOM to be fully oaded
@@ -104,6 +152,7 @@ document.addEventListener("DOMContentLoaded", function()
 
 
 //Project Button Links
+// Listens for the DOM to be fully oaded
 document.addEventListener("DOMContentLoaded", function() 
 {
     // Listens for the "Two Axis Project" button click
@@ -138,55 +187,7 @@ document.addEventListener("DOMContentLoaded", function()
     });
 });
 
-
-let OldColor;
-let VhUnit = window.visualViewport.height;
-// Background change function
-function ColorScroll() 
-{
-    let WindowHeight = 0.25*window.innerHeight;
-
-    let AboutHeight = document.getElementById("AboutPage").offsetTop - WindowHeight;
-    let ExperienceHeight = document.getElementById("ExperiencePage").offsetTop - WindowHeight;
-    let ProjectHeight = document.getElementById("ProjectsPage").offsetTop - WindowHeight;
-    let ContactHeight = document.getElementById("ContactPage").offsetTop - WindowHeight;
-
-
-    if(window.scrollY > ContactHeight)
-    {
-        document.body.style.backgroundColor = "lightgrey";
-    }
-    else if(window.scrollY > ProjectHeight && window.scrollY <= ContactHeight) 
-    {
-        document.body.style.backgroundColor = "lavender";
-    } 
-    else if(window.scrollY > ExperienceHeight && window.scrollY <= ProjectHeight) 
-    {
-        document.body.style.backgroundColor = "lightblue";
-    } 
-    else if(window.scrollY > AboutHeight && window.scrollY <= ExperienceHeight) 
-    {
-        document.body.style.backgroundColor = "paleturquoise";
-    } 
-    else if(window.scrollY <= AboutHeight)
-    {
-        document.body.style.backgroundColor = OldColor;
-    }
-}
-
-// Background Change While scrolling
-// Listens for the DOM to be fully oaded
-document.addEventListener("DOMContentLoaded", function() 
-{   
-    //stored as a variable in case I choose to change first page color  
-    OldColor = document.body.style.backgroundColor; 
-
-    window.addEventListener("scroll", function()
-    {
-        ScrollDebounce(ColorScroll(), 1000);
-    });
-});
-
+//function for sticky banner coming into view once main page is out of view
 function PopBanner()
 {
     if(window.scrollY < VhUnit)
@@ -204,7 +205,8 @@ function PopBanner()
     }
 }
 
-//Sticky Banner function
+//Sticky Banner 
+// Listens for the DOM to be fully oaded
 document.addEventListener("DOMContentLoaded", function() 
 {   
     window.addEventListener("scroll", function()
@@ -230,6 +232,7 @@ function ProjectHover(ProjectID)
 }
 
 //Project Icon Hover
+// Listens for the DOM to be fully oaded
 document.addEventListener("DOMContentLoaded", function()
 {
     ProjectHover("ThisWebsite");
@@ -240,3 +243,35 @@ document.addEventListener("DOMContentLoaded", function()
     ProjectHover("WIP3")
 });
 
+//Contact Button Links
+// Listens for the DOM to be fully oaded
+document.addEventListener("DOMContentLoaded", function() 
+{
+    //open up mail or gmail to autofill email contact
+    document.getElementById("EmailButton").addEventListener("click", function(event)
+    {
+        event.preventDefault();
+        // window.open('', '_blank');
+    });
+
+    //opens new tab to linkedin
+    document.getElementById("LinkedInButton").addEventListener("click", function(event)
+    {
+        event.preventDefault();
+        window.open('https://www.linkedin.com/in/yugi-chan/', '_blank');
+    });
+
+    //opens new tab to github page
+    document.getElementById("GitHubButton").addEventListener("click", function(event)
+    {
+        event.preventDefault();
+        // window.open('', '_blank');
+    });
+
+    //opens new tab to leetcode page
+    document.getElementById("LeetCodeButton").addEventListener("click", function(event)
+    {
+        event.preventDefault();
+        // window.open('', '_blank');
+    });
+});
