@@ -5,7 +5,7 @@
     <title>Projects</title>
     <meta charset="UTF-8">
     <meta name="Author" content="Yugi">
-    <meta name="Description" content="PC Build Projects">
+    <meta name="Description" content="This Very Website!">
 
     <!-- include css library -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
@@ -16,13 +16,20 @@
 
     <script src="ProjectFunctionality.js" async></script>
 </head>
+
+
+<body>
     <!-- trying to use js for this -->
     <div class="StickyBanner">
         <button type="button" class="HomeSticky" id="HomeButton">Home</button>
     </div>
     <div class="ProjectPage">
-        <div class="ProjectTitle">PC Build Projects</div>
+        <div class="ProjectTitle">This Very Website!</div>
         <div class="ProjectContent">
         
         </div>
+    </div>
+
+</body>
+
 </html>

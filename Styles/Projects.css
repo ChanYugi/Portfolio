@@ -61,7 +61,7 @@ body
 
 .StickyBanner
 {
-    z-index: 10;
+    /* z-index: 10; */
 
     display: flex;
     align-items: center;
@@ -77,6 +77,7 @@ body
 
 .HomeSticky
 {
+    z-index: 10;
     margin: 0px;  
     width: 20vw;
     height: 5vh;

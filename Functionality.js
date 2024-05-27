@@ -125,6 +125,12 @@ document.addEventListener("DOMContentLoaded", function()
         window.location.href = 'PCBuilds.html';
     });
 
+    document.getElementById("ThisWebsite").addEventListener("click", function(event)
+    {
+        event.preventDefault();
+        window.location.href = 'ThisWebsite.html';
+    });
+
     document.getElementById("Photography").addEventListener("click", function(event)
     {
         event.preventDefault();
@@ -226,10 +232,10 @@ function ProjectHover(ProjectID)
 //Project Icon Hover
 document.addEventListener("DOMContentLoaded", function()
 {
+    ProjectHover("ThisWebsite");
     ProjectHover("TwoAxis");
     ProjectHover("XRay");
     ProjectHover("PCBuild");
-    ProjectHover("WIP1");
     ProjectHover("WIP2");
     ProjectHover("WIP3")
 });
