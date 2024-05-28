@@ -1,8 +1,7 @@
-
-//parameter definition for function
+//Parameter definition for function
 let Section = "";
 
-// function to scroll
+//Function to scroll
 function ScrollClick(Section)
 {
     let WindowHeight = 0.1*window.innerHeight;
@@ -17,7 +16,7 @@ function ScrollClick(Section)
     });
 }
 
-//function to debounce scroll
+//Function to debounce scroll
 function ScrollDebounce(Funct, delay)
 {
     let timer;
@@ -36,7 +35,7 @@ function ScrollDebounce(Funct, delay)
 
 }
 
-// function to change background colour with scroll 
+//Function to change background colour with scroll 
 let OldColor;
 let VhUnit = window.visualViewport.height;
 function ColorScroll() 
@@ -71,8 +70,8 @@ function ColorScroll()
     }
 }
 
-// Background Change While scrolling
-// Listens for the DOM to be fully oaded
+//Background Change While scrolling
+//Listens for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function() 
 {   
     //stored as a variable in case I choose to change first page color  
@@ -84,8 +83,8 @@ document.addEventListener("DOMContentLoaded", function()
     });
 });
 
-// BUTTONS SMOOTH SCROLL
-// Listens for the DOM to be fully oaded
+//BUTTONS SMOOTH SCROLL
+//Listens for the DOM to be fully oaded
 document.addEventListener("DOMContentLoaded", function() 
 {
     // Listens for the "AboutMe" button click
@@ -152,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function()
 
 
 //Project Button Links
-// Listens for the DOM to be fully oaded
+//Listens for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function() 
 {
     // Listens for the "Two Axis Project" button click
@@ -206,7 +205,7 @@ function PopBanner()
 }
 
 //Sticky Banner 
-// Listens for the DOM to be fully oaded
+//Listens for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function() 
 {   
     window.addEventListener("scroll", function()
@@ -232,7 +231,7 @@ function ProjectHover(ProjectID)
 }
 
 //Project Icon Hover
-// Listens for the DOM to be fully oaded
+//Listens for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function()
 {
     ProjectHover("ThisWebsite");
@@ -244,14 +243,14 @@ document.addEventListener("DOMContentLoaded", function()
 });
 
 //Contact Button Links
-// Listens for the DOM to be fully oaded
+//Listens for the DOM to be fully oaded
 document.addEventListener("DOMContentLoaded", function() 
 {
     //open up mail or gmail to autofill email contact
     document.getElementById("EmailButton").addEventListener("click", function(event)
     {
         event.preventDefault();
-        // window.open('', '_blank');
+        window.open('', '_blank');
     });
 
     //opens new tab to linkedin
@@ -265,13 +264,56 @@ document.addEventListener("DOMContentLoaded", function()
     document.getElementById("GitHubButton").addEventListener("click", function(event)
     {
         event.preventDefault();
-        // window.open('', '_blank');
+        window.open('https://github.com/y33chan', '_blank');
     });
 
     //opens new tab to leetcode page
     document.getElementById("LeetCodeButton").addEventListener("click", function(event)
     {
         event.preventDefault();
-        // window.open('', '_blank');
+        window.open('https://leetcode.com/u/yugThinksHard/', '_blank');
     });
+});
+
+//Increases icon size when hovering icons
+//Listens for the DOM to be fully loaded
+const IconClassesSquare = document.querySelectorAll('.IconsSquare','.ContactInfoSquare')
+const IconClassesRound = document.querySelectorAll('.IconsRound','ContactInfoRound')
+document.addEventListener("DOMContentLoaded", function()
+{
+    IconClassesSquare.forEach(element =>
+    {
+        element.addEventListener("mouseover",function()
+        {
+            element.style.width = '120px';
+            element.style.height = '120px';
+        });
+        
+        element.addEventListener("mouseout",function()
+        {
+            element.style.width = '110px';
+            element.style.height = '110px';
+        });
+    });
+    IconClassesRound.forEach(element =>
+        {
+            element.addEventListener("mouseover",function()
+            {
+                element.style.width = '130px';
+                element.style.height = '130px';
+            });
+            
+            element.addEventListener("mouseout",function()
+            {
+                element.style.width = '120px';
+                element.style.height = '120px';
+            });
+        });
+});
+
+//Stores current URL of Index for comparison when going to other pages
+//Listens for the DOM to be fully loaded
+document.addEventListener("DOMContentLoaded", function()
+{
+    sessionStorage.setItem('PreviousURL', window.location.href);
 });

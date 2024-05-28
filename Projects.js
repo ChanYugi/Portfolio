@@ -1,13 +1,14 @@
+
 document.addEventListener("DOMContentLoaded", function() 
 {
-
+    var URLCompare = sessionStorage.getItem('PreviousURL');
     // Listens for the "Home" button click
     document.getElementById("HomeButton").addEventListener('click', function()
     {
         //Logic is to check if there is a history to go back to, then go back
         //as that is the minimum amount of work to return to project position.
         
-        if(window.history.length > 1)
+        if(URLCompare && URLCompare.endsWith('Index.html'))
         {
             window.history.back();
         }
