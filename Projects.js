@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function()
         //Logic is to check if there is a history to go back to, then go back
         //as that is the minimum amount of work to return to project position.
         
-        if(URLCompare && URLCompare.endsWith('Index.html'))
+        if(URLCompare && URLCompare.endsWith('index.html'))
         {
             window.history.back();
         }
