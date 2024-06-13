@@ -23,20 +23,21 @@
 
 <body> 
     <!-- Sticky Navigation Tab -->
-    <div class = "StickyBanner" id = "Sticky">
-        <button type= "button" class= "StickyButtons" id= "StickyAbout">
+    <div class = "StickyBanner" id="Sticky">
+        <button type= "button" class= "StickyButtons" id="StickyAbout">
             About Me
         </button>
+    
 
-        <button type= "button" class= "MiddleLeftSticky" id= "StickyExperience">
+        <button type= "button" class= "MiddleLeftSticky" id="StickyExperience">
             Experience
         </button>
         
-        <button type= "button" class= "MiddleRightSticky" id= "StickyProjects">
+        <button type= "button" class= "MiddleRightSticky" id="StickyProjects">
             Projects
         </button>
 
-        <button type= "button" class= "StickyButtons" id= "StickyContact">
+        <button type= "button" class= "StickyButtons" id="StickyContact">
             Contact
         </button>
     </div>   
@@ -57,7 +58,7 @@
     </script>
 
     <!-- Initial page and buttons -->
-    <div class="FirstPage" id = "homepage">
+    <div class="FirstPage" id="homepage">
         <div class="title">
             Yugi Chan<br>
             3A Waterloo Mechatronics 
@@ -88,7 +89,7 @@
     </div>
 
     <!-- Contents -->
-    <div class="PageAbout" id = "AboutPage">
+    <div class="PageAbout" id="AboutPage">
         <!-- Subtitle for section -->
         <div class="Subtitle" id="ScrollAbout"> About Me!</div>
         <div class="GridContainer">
@@ -107,7 +108,7 @@
         </div>
     </div>
     
-    <div class="PageExperience" id = "ExperiencePage">
+    <div class="PageExperience" id="ExperiencePage">
         <!-- Subtitle for section -->
         <div class="Subtitle" id="ScrollExperience"> Professional Experience </div>
 
@@ -177,7 +178,7 @@
         </div>            
     </div>
 
-    <div class="PageProjects" id = "ProjectsPage">
+    <div class="PageProjects" id="ProjectsPage">
         <!-- Subtitle for section -->
         <div class="Subtitle" id="ScrollProjects"> Projects </div>
 
@@ -194,7 +195,7 @@
         </div>
     </div>
 
-    <div class="PageContact" id = "ContactPage">
+    <div class="PageContact" id="ContactPage">
         <!-- Subtitle for section -->
         <div class="Subtitle" id="ScrollContact"> Contact </div>
         <div class="GridContainer">
@@ -217,7 +218,19 @@
                     </button>
             </div>
         </div>
+
+        <div class="PageEmail" id="EmailPrompt">
+            <form>
+                <input class="EmailAddress" type="text" placeholder="Email">
+                <input class="EmailAddress" type="text" placeholder="Subject">
+                <textarea class="EmailContent" type="text"></textarea>
+            </form>
+            <button class="SubmitButton" id="SubmitEmail">Submit</button>
+
+        </div>
     </div> 
+
+    
 </body>
 
 

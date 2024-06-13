@@ -249,8 +249,8 @@ document.addEventListener("DOMContentLoaded", function()
     //open up mail or gmail to autofill email contact
     document.getElementById("EmailButton").addEventListener("click", function(event)
     {
-        event.preventDefault();
-        window.open('', '_blank');
+        document.getElementById("EmailPrompt").style.visibility = "Visible";
+        document.getElementById("EmailPrompt").style.opacity = "1";
     });
 
     //opens new tab to linkedin
@@ -264,7 +264,7 @@ document.addEventListener("DOMContentLoaded", function()
     document.getElementById("GitHubButton").addEventListener("click", function(event)
     {
         event.preventDefault();
-        window.open('https://github.com/ChanYugi', '_blank');
+        window.open('https://github.com/y33chan', '_blank');
     });
 
     //opens new tab to leetcode page

@@ -281,7 +281,7 @@ button
     border-width: 0px;
     opacity: 0.6;
     transition: opacity 0.2s ease-in-out;
-    height: 350px;
+    height: 400px;
 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
                  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -304,7 +304,7 @@ button
 .FirstPage
 {
     width: auto;
-    height: var(--MainHeight);
+    height: 60vw;
     display: flex;
     justify-content: center;
 }
@@ -313,7 +313,7 @@ button
 {
     width: 100vw;
     /* defining section text specs */
-    height: var(--PageAbout);
+    height: 50vw;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
                  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: medium;
@@ -341,7 +341,7 @@ button
 {
     width: 100vw;
     /* defining section text specs */
-    height: var(--PageHeightShort);
+    height: 80vw;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
                  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: medium;
@@ -353,8 +353,6 @@ button
 .PageContact
 {   
     width: 100vw;
-    /* defining section text specs */
-    height: 93vh;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
                  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: medium;
@@ -364,6 +362,95 @@ button
 }
 
 
+.PageEmail
+{   
+    visibility: hidden;
+    opacity: 0;
+    width: 100vw;
+    margin-block: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: opacity 0.5s ease-in;
+    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+                 Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-variant: small-caps;
+    font-weight: 100;
+}
+
+.EmailAddress
+{
+    width: 50vw;
+    height: 4vh;
+    margin-bottom: 20px;
+    padding-inline: 15px;
+
+    border-radius: 10px;
+    border-width: 1px;
+
+    font-family: arial, times new roman, Courier New;
+    font-size: medium;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 1;    
+}
+
+input::placeholder 
+{
+    font-family: arial, times new roman, Courier New;
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    margin-block: none;
+}
+
+textarea
+{
+    resize: none;
+overflow-y: hidden
+;
+}
+
+.EmailContent
+{
+    width: 50vw;
+    height: 30vh;
+    margin-bottom: 5vh;
+    padding: 15px;
+    border-radius: 1vw;
+    border-width: 1px;
+
+    font-family: arial, times new roman, Courier New;
+    font-size: medium;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 1;    
+}
+
+.SubmitButton
+{
+    width: 20vw;
+    height: 5vh;
+    border-width: 1px;;
+    border-radius: 20px;
+    margin-bottom: 20vh;
+
+    background-color: white;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+                 Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+}
 .AboutContent
 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -464,3 +551,4 @@ button
     transition: ease 0.2s;
     border-width: 10px;
 }
+
