@@ -275,6 +275,17 @@ document.addEventListener("DOMContentLoaded", function()
     });
 });
 
+//Contact Button Links
+//Listens for the DOM to be fully oaded
+document.addEventListener("DOMContentLoaded", function() 
+{
+    //open up mail or gmail to autofill email contact
+    document.getElementById("SubmitEmail").addEventListener("click", function(event)
+    {
+
+    });
+});
+
 //Increases icon size when hovering icons
 //Listens for the DOM to be fully loaded
 const IconClassesSquare = document.querySelectorAll('.IconsSquare','.ContactInfoSquare')
