@@ -264,7 +264,7 @@ document.addEventListener("DOMContentLoaded", function()
     document.getElementById("GitHubButton").addEventListener("click", function(event)
     {
         event.preventDefault();
-        window.open('https://github.com/y33chan', '_blank');
+        window.open('https://github.com/ChanYugi', '_blank');
     });
 
     //opens new tab to leetcode page
