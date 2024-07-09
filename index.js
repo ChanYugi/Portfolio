@@ -179,6 +179,13 @@ document.addEventListener("DOMContentLoaded", function()
         window.location.href = 'ThisWebsite.html';
     });
 
+    // Listens for the "Checklist" button click
+    document.getElementById("Checklist").addEventListener("click", function(event)
+    {
+        event.preventDefault();
+        window.location.href = 'Checklist.html';
+    });
+
     document.getElementById("Photography").addEventListener("click", function(event)
     {
         event.preventDefault();
