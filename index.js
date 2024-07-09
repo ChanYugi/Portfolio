@@ -242,11 +242,10 @@ function ProjectHover(ProjectID)
 document.addEventListener("DOMContentLoaded", function()
 {
     ProjectHover("ThisWebsite");
+    ProjectHover("Checklist")
     ProjectHover("TwoAxis");
     ProjectHover("XRay");
     ProjectHover("PCBuild");
-    ProjectHover("WIP2");
-    ProjectHover("WIP3")
 });
 
 //Contact Button Links
