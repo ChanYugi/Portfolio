@@ -13,6 +13,17 @@
             crossorigin="anonymous">
     </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+        (function() {
+            emailjs.init({
+              publicKey: "FTJO-O8Ajchh_j6RH",
+            });
+        })();
+    </script>
+
+    </script>
     <!-- CSS file -->
     <link rel="stylesheet" href="Styles/index.css">
 
@@ -220,13 +231,12 @@
         </div>
 
         <div class="PageEmail" id="EmailPrompt">
-            <form>
-                <input class="EmailAddress" type="text" placeholder="Email">
-                <input class="EmailAddress" type="text" placeholder="Subject">
-                <textarea class="EmailContent" type="text"></textarea>
+            <form id="EmailForm">
+                <input class="EmailAddress" name="Email" type="text" placeholder="Email">
+                <input class="EmailAddress" name="EmailSubject" type="text" placeholder="Subject">
+                <textarea class="EmailContent" name="EmailBody" type="text" placeholder="Message"></textarea>
             </form>
             <button class="SubmitButton" id="SubmitEmail">Submit</button>
-
         </div>
     </div> 
 

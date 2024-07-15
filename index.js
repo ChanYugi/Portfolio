@@ -2,14 +2,12 @@
 let Section = "";
 
 //Function to scroll
-function ScrollClick(Section)
-{
+function ScrollClick(Section){
     let WindowHeight = 0.1*window.innerHeight;
     let SectionHeight = document.getElementById(Section).offsetTop;
     let TotalHeight = SectionHeight - WindowHeight;
 
-    window.scrollTo
-    ({
+    window.scrollTo({
         top: TotalHeight,
         left: 0,
         behavior: "smooth"
@@ -17,17 +15,14 @@ function ScrollClick(Section)
 }
 
 //Function to debounce scroll
-function ScrollDebounce(Funct, delay)
-{
+function ScrollDebounce(Funct, delay){
     let timer;
-    return function()
-    {
+    return function(){
         clearTimeout(timer);
         const context = this;
         const args = arguments;
 
-        timer = setTimeout(function()
-        {
+        timer = setTimeout(function(){
             return Funct.apply(context,args);
         }
         , delay);
@@ -38,8 +33,7 @@ function ScrollDebounce(Funct, delay)
 //Function to change background colour with scroll 
 let OldColor;
 let VhUnit = window.visualViewport.height;
-function ColorScroll() 
-{
+function ColorScroll(){
     let WindowHeight = 0.25*window.innerHeight;
 
     let AboutHeight = document.getElementById("AboutPage").offsetTop - WindowHeight;
@@ -48,102 +42,85 @@ function ColorScroll()
     let ContactHeight = document.getElementById("ContactPage").offsetTop - WindowHeight;
 
 
-    if(window.scrollY > ContactHeight)
-    {
+    if(window.scrollY > ContactHeight){
         document.body.style.backgroundColor = "lightgrey";
     }
-    else if(window.scrollY > ProjectHeight && window.scrollY <= ContactHeight) 
-    {
+    else if(window.scrollY > ProjectHeight && window.scrollY <= ContactHeight){
         document.body.style.backgroundColor = "lavender";
     } 
-    else if(window.scrollY > ExperienceHeight && window.scrollY <= ProjectHeight) 
-    {
+    else if(window.scrollY > ExperienceHeight && window.scrollY <= ProjectHeight){
         document.body.style.backgroundColor = "lightblue";
     } 
-    else if(window.scrollY > AboutHeight && window.scrollY <= ExperienceHeight) 
-    {
+    else if(window.scrollY > AboutHeight && window.scrollY <= ExperienceHeight){
         document.body.style.backgroundColor = "paleturquoise";
     } 
-    else if(window.scrollY <= AboutHeight)
-    {
+    else if(window.scrollY <= AboutHeight){
         document.body.style.backgroundColor = OldColor;
     }
 }
 
 //Background Change While scrolling
 //Listens for the DOM to be fully loaded
-document.addEventListener("DOMContentLoaded", function() 
-{   
+document.addEventListener("DOMContentLoaded", function(){   
     //stored as a variable in case I choose to change first page color  
     OldColor = document.body.style.backgroundColor; 
 
-    window.addEventListener("scroll", function()
-    {
+    window.addEventListener("scroll", function(){
         ScrollDebounce(ColorScroll(), 1000);
     });
 });
 
 //BUTTONS SMOOTH SCROLL
 //Listens for the DOM to be fully oaded
-document.addEventListener("DOMContentLoaded", function() 
-{
+document.addEventListener("DOMContentLoaded", function(){
     // Listens for the "AboutMe" button click
-    document.getElementById("AboutMe").addEventListener("click", function()
-    {
+    document.getElementById("AboutMe").addEventListener("click", function(){
         // parameter is the section title Div ID
         ScrollClick("ScrollAbout");
     });
 
     // Listens for the "Experience" button click
-    document.getElementById("Experience").addEventListener("click", function()
-    {
+    document.getElementById("Experience").addEventListener("click", function(){
         // parameter is the section title Div ID
         ScrollClick("ScrollExperience");
     });
 
     // Listens for the "Projects" button click
-    document.getElementById("Projects").addEventListener("click", function()
-    {
+    document.getElementById("Projects").addEventListener("click", function(){
         // parameter is the section title Div ID
         ScrollClick("ScrollProjects");
     });
 
     // Listens for the "Photography" button click
-    document.getElementById("Photography").addEventListener("click", function()
-    {
+    document.getElementById("Photography").addEventListener("click", function(){
         // parameter is the section title Div ID
         // document.getElementById
     });
 
     // Listens for the "Contact" button click
-    document.getElementById("Contact").addEventListener("click", function()
-    {
+    document.getElementById("Contact").addEventListener("click", function(){
         // parameter is the section title Div ID
         ScrollClick("ScrollContact");      
     });
 
-    document.getElementById("StickyAbout").addEventListener("click", function()
-    {
+    document.getElementById("StickyAbout").addEventListener("click", function(){
         // parameter is the section title Div ID
         ScrollClick("ScrollAbout");
     });
 
-    document.getElementById("StickyExperience").addEventListener("click", function()
-    {
+    document.getElementById("StickyExperience").addEventListener("click", function(){
         // parameter is the section title Div ID
         ScrollClick("ScrollExperience");
     });
 
     // Listens for the "Projects" button click
-    document.getElementById("StickyProjects").addEventListener("click", function()
-    {
+    document.getElementById("StickyProjects").addEventListener("click", function(){
         // parameter is the section title Div ID
         ScrollClick("ScrollProjects");
     });
 
     // Listens for the "Contact" button click
-    document.getElementById("StickyContact").addEventListener("click", function()
-    {
+    document.getElementById("StickyContact").addEventListener("click", function(){
         // parameter is the section title Div ID
         ScrollClick("ScrollContact");      
     });
@@ -152,86 +129,69 @@ document.addEventListener("DOMContentLoaded", function()
 
 //Project Button Links
 //Listens for the DOM to be fully loaded
-document.addEventListener("DOMContentLoaded", function() 
-{
+document.addEventListener("DOMContentLoaded", function() {
     // Listens for the "Two Axis Project" button click
-    document.getElementById("TwoAxis").addEventListener("click", function(event)
-    {
+    document.getElementById("TwoAxis").addEventListener("click", function(event){
         event.preventDefault();
         window.location.href = 'TwoAxisMachine.html';
     });
 
-    document.getElementById("XRay").addEventListener("click", function(event)
-    {
+    document.getElementById("XRay").addEventListener("click", function(event){
         event.preventDefault();
         window.location.href = 'XRayFractureDetector.html';
     });
 
-    document.getElementById("PCBuild").addEventListener("click", function(event)
-    {
+    document.getElementById("PCBuild").addEventListener("click", function(event){
         event.preventDefault();
         window.location.href = 'PCBuilds.html';
     });
 
-    document.getElementById("ThisWebsite").addEventListener("click", function(event)
-    {
+    document.getElementById("ThisWebsite").addEventListener("click", function(event){
         event.preventDefault();
         window.location.href = 'ThisWebsite.html';
     });
 
     // Listens for the "Checklist" button click
-    document.getElementById("Checklist").addEventListener("click", function(event)
-    {
+    document.getElementById("Checklist").addEventListener("click", function(event){
         event.preventDefault();
         window.location.href = 'Checklist.html';
     });
 
-    document.getElementById("Photography").addEventListener("click", function(event)
-    {
+    document.getElementById("Photography").addEventListener("click", function(event){
         event.preventDefault();
         window.location.href = 'Photography.html';
     });
 });
 
 //function for sticky banner coming into view once main page is out of view
-function PopBanner()
-{
-    if(window.scrollY < VhUnit)
-    {
+function PopBanner(){
+    if(window.scrollY < VhUnit){
         document.getElementById("Sticky").style.visibility = "hidden";
-
     }
-    else if(window.scrollY >= VhUnit)
-    {
+    else if(window.scrollY >= VhUnit){
         document.getElementById("Sticky").style.visibility = "visible";
     }
-    else
-    {
+    else{
         alert('system error');
     }
 }
 
 //Sticky Banner 
 //Listens for the DOM to be fully loaded
-document.addEventListener("DOMContentLoaded", function() 
-{   
-    window.addEventListener("scroll", function()
-    {
+document.addEventListener("DOMContentLoaded", function(){   
+    window.addEventListener("scroll", function(){
         PopBanner();
     });
 });
 
 //Changes icon opacity when mouse is over element
-function ProjectHover(ProjectID)
-{
-    document.getElementById(ProjectID).addEventListener("mouseover", function()
-    {
+function ProjectHover(ProjectID){
+    document.getElementById(ProjectID).addEventListener("mouseover", function(){
         //Changes Opacity of grid element and option to view mmore
         document.getElementById(ProjectID).style.opacity = 1;
     });
 
-    document.getElementById(ProjectID).addEventListener("mouseout", function()
-    {
+    document.getElementById(ProjectID).addEventListener("mouseout", function(){
         //Changes Opacity of grid element and option to view mmore
         document.getElementById(ProjectID).style.opacity = 0.7;
     });
@@ -239,8 +199,7 @@ function ProjectHover(ProjectID)
 
 //Project Icon Hover
 //Listens for the DOM to be fully loaded
-document.addEventListener("DOMContentLoaded", function()
-{
+document.addEventListener("DOMContentLoaded", function(){
     ProjectHover("ThisWebsite");
     ProjectHover("Checklist")
     ProjectHover("TwoAxis");
@@ -250,32 +209,27 @@ document.addEventListener("DOMContentLoaded", function()
 
 //Contact Button Links
 //Listens for the DOM to be fully oaded
-document.addEventListener("DOMContentLoaded", function() 
-{
+document.addEventListener("DOMContentLoaded", function(){
     //open up mail or gmail to autofill email contact
-    document.getElementById("EmailButton").addEventListener("click", function(event)
-    {
+    document.getElementById("EmailButton").addEventListener("click", function(event){
         document.getElementById("EmailPrompt").style.visibility = "Visible";
         document.getElementById("EmailPrompt").style.opacity = "1";
     });
 
     //opens new tab to linkedin
-    document.getElementById("LinkedInButton").addEventListener("click", function(event)
-    {
+    document.getElementById("LinkedInButton").addEventListener("click", function(event){
         event.preventDefault();
         window.open('https://www.linkedin.com/in/yugi-chan/', '_blank');
     });
 
     //opens new tab to github page
-    document.getElementById("GitHubButton").addEventListener("click", function(event)
-    {
+    document.getElementById("GitHubButton").addEventListener("click", function(event){
         event.preventDefault();
         window.open('https://github.com/ChanYugi', '_blank');
     });
 
     //opens new tab to leetcode page
-    document.getElementById("LeetCodeButton").addEventListener("click", function(event)
-    {
+    document.getElementById("LeetCodeButton").addEventListener("click", function(event){
         event.preventDefault();
         window.open('https://leetcode.com/u/yugThinksHard/', '_blank');
     });
@@ -283,12 +237,24 @@ document.addEventListener("DOMContentLoaded", function()
 
 //Contact Button Links
 //Listens for the DOM to be fully oaded
-document.addEventListener("DOMContentLoaded", function() 
-{
+document.addEventListener("DOMContentLoaded", function(){
     //open up mail or gmail to autofill email contact
-    document.getElementById("SubmitEmail").addEventListener("click", function(event)
-    {
+    document.getElementById("SubmitEmail").addEventListener("click", function(event){
+        //using emailjs for a more robust system
 
+        const Form = document.getElementById("EmailForm")
+
+        event.preventDefault();
+        emailjs.sendForm('service_0h9w1aj', 'template_rxykmid', Form)
+            .then(() => {
+                console.log('SUCCESS!');
+                document.getElementById("EmailForm").reset();
+                alert('Email sent!');
+            }, 
+            (error) => {
+                console.log('FAILED...', error);
+                alert('Error, email unsuccessful');
+        });       
     });
 });
 
@@ -296,41 +262,34 @@ document.addEventListener("DOMContentLoaded", function()
 //Listens for the DOM to be fully loaded
 const IconClassesSquare = document.querySelectorAll('.IconsSquare','.ContactInfoSquare')
 const IconClassesRound = document.querySelectorAll('.IconsRound','ContactInfoRound')
-document.addEventListener("DOMContentLoaded", function()
-{
-    IconClassesSquare.forEach(element =>
-    {
-        element.addEventListener("mouseover",function()
-        {
+document.addEventListener("DOMContentLoaded", function(){
+    IconClassesSquare.forEach(element =>{
+        element.addEventListener("mouseover",function(){
             element.style.width = '120px';
             element.style.height = '120px';
         });
         
-        element.addEventListener("mouseout",function()
-        {
+        element.addEventListener("mouseout",function(){
             element.style.width = '110px';
             element.style.height = '110px';
         });
     });
-    IconClassesRound.forEach(element =>
-        {
-            element.addEventListener("mouseover",function()
-            {
-                element.style.width = '130px';
-                element.style.height = '130px';
-            });
-            
-            element.addEventListener("mouseout",function()
-            {
-                element.style.width = '120px';
-                element.style.height = '120px';
-            });
+    IconClassesRound.forEach(element =>{
+        element.addEventListener("mouseover",function(){
+            element.style.width = '130px';
+            element.style.height = '130px';
         });
+            
+        element.addEventListener("mouseout",function()
+        {
+            element.style.width = '120px';
+            element.style.height = '120px';
+        });
+    });
 });
 
 //Stores current URL of Index for comparison when going to other pages
 //Listens for the DOM to be fully loaded
-document.addEventListener("DOMContentLoaded", function()
-{
+document.addEventListener("DOMContentLoaded", function(){
     sessionStorage.setItem('PreviousURL', window.location.href);
 });
