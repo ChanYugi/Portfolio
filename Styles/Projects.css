@@ -111,3 +111,7 @@ body
     font-variant: normal;
     font-weight: 100;
 }
+
+.HomeSticky:hover{
+    filter: brightness(90%);
+}

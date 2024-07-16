@@ -1,11 +1,9 @@
 
-a
-{
+a{
     text-decoration: none;
 }
 
-body
-{
+body{
     padding: 0;
     margin: 0;
     overflow-x: hidden;
@@ -18,28 +16,24 @@ body
     transition: background-color 1.5s ease;
 }
 
-video
-{
+video{
     height: auto;
     width: 100%;
 }
 
-button
-{
+button{
     cursor: pointer;
 }
 
 /*variable to be used for scroll condition and modularity*/
-:root
-{
+:root{
     --MainHeight: 150vh;
     --PageAbout: 100vh;
     --PageHeightShort: 150vh;
 }
 
 /* banner style */
-.StickyBanner
-{
+.StickyBanner{
     visibility:hidden; 
     z-index: 10;
 
@@ -57,8 +51,7 @@ button
 }
 
 /* buttons for sticky banner needs updated style */
-.StickyButtons
-{
+.StickyButtons{
     margin: 0px;  
     width: 20vw;
     height: 5vh;
@@ -75,8 +68,8 @@ button
     font-weight: 100;
 }
 
-.MiddleLeftSticky
-{
+
+.MiddleLeftSticky{
     
     margin: 0px;  
     width: 20vw;
@@ -94,8 +87,7 @@ button
     font-weight: 100;
 }
 
-.MiddleRightSticky
-{
+.MiddleRightSticky{
     
     margin: 0px;  
     width: 20vw;
@@ -116,8 +108,7 @@ button
 }
 
 
-.title
-{
+.title{
     /*position of title container relative to the top*/
     position: absolute;
     top: 100px;
@@ -135,8 +126,7 @@ button
     font-weight: 300; 
 }
 
-.Subtitle
-{
+.Subtitle{
     height: 70px;
     margin-bottom: 25px;
     text-align: center;
@@ -155,8 +145,7 @@ button
     
 }
 
-.OptionsBox
-{
+.OptionsBox{
     border-radius: 45px;
     display: flex;
     flex-direction: column;
@@ -185,8 +174,7 @@ button
 }
 
 
-.ButtonOpt
-{
+.ButtonOpt{
         
     /*defining container dimensions*/
     width: 500px;
@@ -211,16 +199,18 @@ button
     font-weight: 100;   
 }
 
+.ButtonOpt:hover{
+    filter: brightness(90%);
+}
+
 
 /* To define the layout style of the content inside the content section */
-.GridContainer
-{
+.GridContainer{
     display: flex;
     justify-content: center;
 }
 
-.Grid
-{
+.Grid{
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(1,1fr);
@@ -232,22 +222,19 @@ button
     margin-bottom: 10vh;
 }
 
-.GridAbout
-{
+.GridAbout{
     grid-column: 5/13;
     text-wrap: wrap;
     text-align: center;
 }
 
-.GridContentDescription
-{
+.GridContentDescription{
     grid-column: 7/16;
     margin: 10px;
     padding: 0px;       
 }
 
-.GridContentImage
-{
+.GridContentImage{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -257,8 +244,7 @@ button
     overflow: hidden;
 }
 
-.GridProjects
-{
+.GridProjects{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
@@ -268,8 +254,7 @@ button
 
 }
 
-.GridProjectItem:nth-child(n)
-{   
+.GridProjectItem:nth-child(n){   
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -291,8 +276,7 @@ button
     font-weight: 100;
 }
 
-.GridContact
-{
+.GridContact{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 100px;
@@ -301,16 +285,14 @@ button
     margin-top: 15vh;
 }
 
-.FirstPage
-{
+.FirstPage{
     width: auto;
     height: 60vw;
     display: flex;
     justify-content: center;
 }
 
-.PageAbout
-{
+.PageAbout{
     width: 100vw;
     /* defining section text specs */
     height: 50vw;
@@ -323,8 +305,7 @@ button
 }
 
 /* To define container style for each section of content */
-.PageExperience
-{
+.PageExperience{
     width: 100vw;
     height: auto;
     margin-bottom: 15vh;
@@ -337,8 +318,7 @@ button
     font-weight: 100;
 }
 
-.PageProjects
-{
+.PageProjects{
     width: 100vw;
     /* defining section text specs */
     height: 80vw;
@@ -350,8 +330,7 @@ button
     font-weight: 100;
 }
 
-.PageContact
-{   
+.PageContact{   
     width: 100vw;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
                  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -362,8 +341,7 @@ button
 }
 
 
-.PageEmail
-{   
+.PageEmail{   
     visibility: hidden;
     opacity: 0;
     width: 100vw;
@@ -382,8 +360,7 @@ button
     font-weight: 100;
 }
 
-.EmailAddress
-{
+.EmailAddress{
     width: 50vw;
     height: 4vh;
     margin-bottom: 20px;
@@ -399,27 +376,23 @@ button
     font-weight: 1;    
 }
 
-input::placeholder 
-{
+input::placeholder{
     font-family: arial, times new roman, Courier New;
 }
 
-form
-{
+form{
     display: flex;
     flex-direction: column;
     margin-block: none;
 }
 
-textarea
-{
+textarea{
     resize: none;
 overflow-y: hidden
 ;
 }
 
-.EmailContent
-{
+.EmailContent{
     width: 50vw;
     height: 30vh;
     margin-bottom: 5vh;
@@ -434,8 +407,7 @@ overflow-y: hidden
     font-weight: 1;    
 }
 
-.SubmitButton
-{
+.SubmitButton{
     width: 20vw;
     height: 5vh;
     border-width: 1px;;
@@ -451,8 +423,12 @@ overflow-y: hidden
     font-variant: normal;
     font-weight: 100;
 }
-.AboutContent
-{
+
+.SubmitButton:hover{
+    filter: brightness(90%);
+}
+
+.AboutContent{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: medium;
@@ -461,8 +437,7 @@ overflow-y: hidden
     font-weight: 100;
 }
 
-.Contents
-{
+.Contents{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: medium;
@@ -471,8 +446,7 @@ overflow-y: hidden
     font-weight: 100;
 }
 
-.DescriptionTitle
-{
+.DescriptionTitle{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: large;
@@ -482,8 +456,7 @@ overflow-y: hidden
     margin-bottom: 10px;
 }
 
-.DescriptionDetail
-{
+.DescriptionDetail{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: small;
@@ -493,13 +466,11 @@ overflow-y: hidden
     margin-bottom: 15px;
 }
 
-.Description
-{
+.Description{
     line-height: 1cm;
 }
 
-.ContactInfoRound
-{
+.ContactInfoRound{
     display: flex;
     width: 120px;
     height: 120px;
@@ -515,8 +486,7 @@ overflow-y: hidden
     border-width: 0px;
 }
 
-.ContactInfoSquare
-{
+.ContactInfoSquare{
     display: flex;
     width: 110px;
     height: 110px;
@@ -532,8 +502,7 @@ overflow-y: hidden
     border-width: 0px;
 }
 
-.IconsSquare
-{
+.IconsSquare{
     left: 0;
     height: 110px;
     width: 110px;
@@ -542,8 +511,7 @@ overflow-y: hidden
     border-width: 1px;
 }
 
-.IconsRound
-{
+.IconsRound{
     left: 0;
     height: 120px;
     width: 120px;

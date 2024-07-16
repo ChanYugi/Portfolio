@@ -25,8 +25,8 @@
         <button type="button" class="HomeSticky" id="HomeButton">Home</button>
     </div>
     <div class="ProjectPage">
-        <div class="ProjectTitle">Two-Axis Machine</div>
-        <div class="ProjectContent">
+        <h1 class="ProjectTitle">Two-Axis Machine</h1>
+        <p class="ProjectContent">
             This project focuses on learning about building a simple embedded system and understanding how to bring 
             projects to life with a Nucleo STM32 microcontroller. 
             As a group, we were working with fairly old hardware, only having a motor shield for the microcontroller, 
@@ -34,13 +34,13 @@
             work. That's part of the experience! The mechanical setup of the project was primarily borrowed from the 
             university, giving us more freedom to learn about integrating an embedded systems from a controls and 
             hardware perspective. 
-        </div>
+        </p>
         <br>
 
 
-        <div class="ProjectSubTitle">Microcontoller Implementation</div>
+        <h2 class="ProjectSubTitle">Microcontoller Implementation</h2>
         <img src="MachineProject/MachinePhoto.jpg" height="400px" width="600px">
-        <div class="ProjectContent">
+        <p class="ProjectContent">
             The goal of this project was to implement a microcontoller to (control) the machine to move anywhere along 
             a 2D-plane. As failsafes, the switches were used to set the physical boundaries of the motor and board. It 
             was decided that this would be a better implementation than using the stepper motor to calculate the 
@@ -58,12 +58,12 @@
             circuit, it's programmed to fire an interrupt signal to the interrupt handler. The handler will then perform 
             the corresponding executable to drive an LED. Ultimately, this test helps to provide the framework for how 
             the limit switch interrupts will work; when a switch is triggered, fire off the interrupt.  
-        </div>
+        </p>
         <br>
 
-        <div class="ProjectSubTitle">Motor Characterization</div>
+        <h2 class="ProjectSubTitle">Motor Characterization</h2>
         <img src="MachineProject/MotorSpeedPhoto.jpg" height="350px" width="600px">
-        <div class="ProjectContent">
+        <p class="ProjectContent">
             The 3.3 volt pin on the microcontroller is connected to a potentiometer and then to the input pin for setting 
             the speed. With the step motors, an integer can be set through the microcontoller to control the speed. The 
             issue with this is that this value is arbitrary to us until we can characterize and map the integer value to 
@@ -73,12 +73,12 @@
             value was calculate by taking the time to cross the known distance, and this was plotted in excel to determine 
             the linearity of the motor speeds as well as the maximum speed.
 
-        </div>
+        </p>
         <br>
 
-        <div class="ProjectSubTitle">Machine Logic and Wiring</div>
+        <h2 class="ProjectSubTitle">Machine Logic and Wiring</h2>
         <img src="MachineProject/MicrocontrollerPhoto.jpg" height="750px" width="600px">
-        <div class="ProjectContent">
+        <p class="ProjectContent">
             The hardware was configured such that the limit switches and the potentiometer used the 3.3 volt pin as the high 
             voltage via a breadboard. Similarly, the ground pin was also connected to the breadboard for the pins and 
             potentiometer. The microcontroller would be powered through our laptops while the stepper motors themselves use a 
@@ -101,7 +101,7 @@
             the different axes along the plane. 
             The direction switch takes the limit switch implementation and modifies it to
             actuate different motors instead.    
-        </div>
+        </p>
     </div>
 
 
