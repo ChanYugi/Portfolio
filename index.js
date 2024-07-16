@@ -235,26 +235,43 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 });
 
+//need to chechk for non-empty fields!
+
 //Contact Button Links
 //Listens for the DOM to be fully oaded
 document.addEventListener("DOMContentLoaded", function(){
-    //open up mail or gmail to autofill email contact
+    //Submit button for email form
     document.getElementById("SubmitEmail").addEventListener("click", function(event){
-        //using emailjs for a more robust system
-
-        const Form = document.getElementById("EmailForm")
-
         event.preventDefault();
-        emailjs.sendForm('service_0h9w1aj', 'template_rxykmid', Form)
-            .then(() => {
-                console.log('SUCCESS!');
-                document.getElementById("EmailForm").reset();
-                alert('Email sent!');
-            }, 
-            (error) => {
-                console.log('FAILED...', error);
-                alert('Error, email unsuccessful');
-        });       
+
+        //Set "Form" to the EmailForm element in the index HTML file
+        const Form = document.getElementById("EmailForm")
+        let NotEmpty = true;
+
+        //Checks for non-empty field inputs
+        Array.from(Form.elements).forEach(element =>{
+            if (element.value !== ""){
+                NotEmpty = true;
+            }
+            else{
+                NotEmpty = false;
+            }
+        });
+
+        //If field inputs are not empty, then allow email send
+        if(NotEmpty){
+            //Emailjs service, parameters are serviceID, templateID, and the HTML form element
+            emailjs.sendForm('service_0h9w1aj', 'template_rxykmid', Form)
+                .then(() => {
+                    console.log('SUCCESS!');
+                    document.getElementById("EmailForm").reset();
+                    alert('Email submitted!');
+                }, 
+                (error) => {
+                    console.log('FAILED...', error);
+                    alert('Error, email unsuccessful');
+                }); 
+        }
     });
 });
 
